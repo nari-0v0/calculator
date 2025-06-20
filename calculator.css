@@ -1,0 +1,170 @@
+/* 모든 요소의 기본 여백 제거 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* HTML과 Body의 기본 설정 */
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/*초록색 박스 가운데 정렬*/
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*버튼*/
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /*왼쪽정렬*/
+    width: 90%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    gap: 1vw;
+}
+
+.menu button {
+    position:relative;
+    color: transparent;
+    transition: color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100%;
+    border: 0;
+}
+
+.menu button:hover{
+    color: white;
+}
+
+#close {
+    background-color: #ff605c;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1px;
+}
+
+#minimize {
+    background-color: #ffbd44;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1px;
+}
+
+#maximize {
+    background-color: #00ca4e;
+    justify-content: center;
+    align-items: center;
+}
+
+/*박스*/
+.calculator-container {
+    display: flex;
+    /* 주 컨테이너 */
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    gap: 0;
+    overflow: clip;
+    border-radius: 10px;
+    background-color: #232323;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    color: #ebebeb;
+    width: 90%;
+    height: 20%;
+    padding: 1vw;
+    font-weight: bold;
+    /*글자굵게*/
+    overflow: clip;
+    gap: 1vh;
+}
+
+.history {
+    font-size: 1.5vh;
+    width: 100%;
+    flex: 4;
+    margin: 0;
+}
+
+.log {
+    font-size: 3vh;
+    width: 100%;
+    flex: 6;
+    margin: 0;
+
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    /*다음줄 넘기기*/
+    align-content: flex-start;
+    /* 넘긴줄들 왼쪽 정렬*/
+    justify-content: flex-start;
+    width: 95%;
+    height: 90%;
+    gap: 1vw;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24%;
+    height: 17.4%;
+    font-weight: bold;
+    font-size: 2.5vh;
+    background-color: white;
+    gap: 0;
+}
+.zero{
+    width: 49%;
+}
+
+/* .cost{
+    height: 29%;
+} */
+
+.button:active {
+    background-color: rgba(168, 137, 239, 0.5);
+}
+
+.operator, .cost {
+    background-color: #f39f2c;
+}
+
+.number, .dot{
+    background-color: #535353;
+}
+
+.reset{
+    width: 49%;
+    height: 5%;
+    background-color: #ff605c;
+}
+
+.back{
+    width: 49%;
+    height: 5%;
+    background-color: #4460ff;
+}
+
